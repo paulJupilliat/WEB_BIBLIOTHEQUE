@@ -5,7 +5,7 @@ class Author (db.Model):
     id = db.Column(db.Integer, primary_key =True)
     name = db.Column(db.String(100))
 
-class Book(db. Model ):
+class Book(db.Model ):
     id = db.Column (db.Integer, primary_key =True)
     price = db.Column(db.Float)
     title = db.Column(db.String (100))
@@ -32,4 +32,4 @@ def get_samplet():
     return Book.query.limit(100).all()
 
 def get_author(id):
-    return Author.get(id)
+    return Author.query.filter(Author.id==id).one()
