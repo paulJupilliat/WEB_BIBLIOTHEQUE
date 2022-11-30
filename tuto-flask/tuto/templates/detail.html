@@ -10,6 +10,7 @@
         <div class="card sample position-absolute top-50 start-50 translate-middle " style="width: 18rem;">
             <img src="{{ url_for('static', filename='images/'+book.img) }}" class="card-img-top" >
             <div class="card-body">
+              <a href="/edit/author/{{ book.id }}"> modifier le nom de l'auteur</a> 
               <h5 class="card-title">{{book.title}}</h5>
               <p class="card-text">Auteur : {{book.author.name}}</p>
               <p class="card-text">Prix : {{book.price}}</p>

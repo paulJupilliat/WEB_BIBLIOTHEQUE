@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h1 >Edit author : {{ author.name }}</h1>
-<form role="form" method ="POST" action ="">
+<form role="form" method ="POST" action ="{{ url_for('save_author') }}">
     {{ form.hidden_tag () }}
     <div class="form-group">
         {{ form.name.label }} {{ form.name(size=50, class_="form-control") }}
